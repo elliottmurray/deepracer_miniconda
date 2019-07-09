@@ -1,0 +1,13 @@
+version: '2'
+services:
+  deepracer:
+    build: .
+    image: deepracer
+    working_dir: /code
+    command: [ "jupyter", "lab", "--allow-root", "--notebook-dir" ,"/code" ,"--ip", "0.0.0.0"]
+    volumes:
+      - .:/code
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONPATH=/code:/code/src

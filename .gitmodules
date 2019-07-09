@@ -1,0 +1,3 @@
+[submodule "aws-deepracer"]
+	path = aws-deepracer
+	url = https://github.com/aws-samples/aws-deepracer-workshops
