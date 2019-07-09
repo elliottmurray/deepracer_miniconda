@@ -7,8 +7,9 @@ services:
     command: [ "jupyter", "lab", "--allow-root", "--notebook-dir" ,"/code" ,"--ip", "0.0.0.0"]
     volumes:
       - ./aws-deepracer/:/code
-      - /.aws:/root/.aws
+      - ~/.aws:/root/.aws
     ports:
       - "8888:8888"
     environment:
       - PYTHONPATH=/code:/code/log-analysis
+      - AWS_DEFAULT_PROFILE
