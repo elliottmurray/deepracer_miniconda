@@ -1,0 +1,14 @@
+version: '2'
+services:
+  deepracer:
+    build: .
+    image: deepracer
+    working_dir: /code
+    command: [ "jupyter", "lab", "--allow-root", "--notebook-dir" ,"/code" ,"--ip", "0.0.0.0"]
+    volumes:
+      - ./aws-deepracer/:/code
+      - /.aws:/root/.aws
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONPATH=/code:/code/log-analysis
