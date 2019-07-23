@@ -34,3 +34,10 @@ Open Notebook:
 log-anaylsis/DeepRacer Log Analysis.ipynb
 
 Shift enter on a cell executes it
+You will need to make one small change. In the 5th executable cell there will be
+```
+stream_name = 'MY_SIM_ID' ## CHANGE This to your simulation application ID
+```
+
+Change this. If you look at your training run you should somewhere see ![Alt text](screenshot.png?raw=true "Deepracer training") and where the simulation log id is (in this case sim-xkts5y54qn7r) copy that in. If you train a new model you might have to change this. Check the fname variable is not being overridden later. Had some bugs with this 
+
